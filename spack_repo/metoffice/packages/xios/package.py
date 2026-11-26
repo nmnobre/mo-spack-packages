@@ -46,10 +46,22 @@ class Xios(Package):
     tag_regex = re.compile(r"^xios-(\d+(?:\.\d+)+)$")
 
     # XIOS 3
-    version("3.0.7.2", sha256="26ec3f54587ef2f9536b46650624a7e764d6af13cebe7a06b98b0537ef287e35")
-    version("3.0.4.1", sha256="9ccbad3823951ee149ac7ecb4f50dbcf24b1786946ed6b1bc21f43b49cffa2aa")
-    version("3.0.4.0", sha256="f109c811d4dda7cb54dc110920787e7ce7b143b8101ce27d0777ef1d373c73b3")
-    version("3.0.1.0", sha256="d357e81d9139eb0e7cc15664297851042340ca57a8e84a92b0d0847b8a7c8bfb")
+    version(
+        "3.0.7.2",
+        sha256="26ec3f54587ef2f9536b46650624a7e764d6af13cebe7a06b98b0537ef287e35",
+    )
+    version(
+        "3.0.4.1",
+        sha256="9ccbad3823951ee149ac7ecb4f50dbcf24b1786946ed6b1bc21f43b49cffa2aa",
+    )
+    version(
+        "3.0.4.0",
+        sha256="f109c811d4dda7cb54dc110920787e7ce7b143b8101ce27d0777ef1d373c73b3",
+    )
+    version(
+        "3.0.1.0",
+        sha256="d357e81d9139eb0e7cc15664297851042340ca57a8e84a92b0d0847b8a7c8bfb",
+    )
 
     # XIOS 2
     version(
