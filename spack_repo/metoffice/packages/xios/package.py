@@ -4,6 +4,7 @@
 #  under which the code may be used.
 # -----------------------------------------------------------------------------
 
+import json
 import os
 import re
 import textwrap
@@ -375,7 +376,7 @@ class Xios(Package):
             url = f"{self.tags_api_url}?per_page={per_page}&page={page}"
             try:
                 tags = spack.util.web.read_json(url)
-            except Exception as e:
+            except (spack.util.web.SpackWebError, json.JSONDecodeError) as e:
                 tty.warn(f"Unable to fetch XIOS tags from {url}: {e}")
                 break
 
