@@ -54,6 +54,9 @@ class Xios(Package):
     version(
         "2.2701", commit="2eb572f0986eca19031eb6c294d116646010687c"
     )  # equivalent sha to legacy svn revision 2701
+    version(
+        "2.4597", commit="459791f1314c61a463bf76a1b4cd347224e77503"
+    )  # equivalent sha to legacy svn revision 2851 + patches (numbered after commit hash)
 
     variant("oasis", default=False, description="enable OASIS support")
     variant(
@@ -120,7 +123,7 @@ class Xios(Package):
         # to work with these compilers
         if any(
             map(spec.satisfies, ("%gcc", "%cce", "%intel", "%oneapi", "%rocmcc"))
-        ) and self.spec.satisfies("@=2.2701"):
+        ) and self.spec.satisfies("@2"):
             text = textwrap.dedent(
                 """
             %CCOMPILER      {MPICXX}
